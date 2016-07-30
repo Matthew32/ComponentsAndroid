@@ -1,0 +1,38 @@
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp">
+
+    <TableRow
+        android:weightSum="3">
+
+        <TextView
+            android:id="@+id/it_tv_asd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:gravity="right"
+
+            android:text="id" />
+
+        <TextView
+
+            android:id="@+id/it_tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:text="name" />
+
+        <TextView
+
+            android:id="@+id/it_tv_password"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/border"
+            android:text="password" />
+
+    </TableRow>
+</TableLayout>
