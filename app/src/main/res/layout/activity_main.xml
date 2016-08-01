@@ -1,63 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<com.example.matthew.componentsandroid.View.ViewUtils.DrawerLayoutMatthew xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
 
-    android:layout_margin="5dp"
-    android:orientation="vertical">
+    <!-- Contenido Principal -->
 
-    <ImageView
-        android:id="@+id/am_iv_image"
+    <include
+        layout="@layout/main_content"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@android:drawable/alert_dark_frame" />
+        android:layout_height="match_parent" />
+    <!-- Menú Deslizante -->
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_menu" />
 
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <TableRow
-
-            android:weightSum="3">
-
-            <TextView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/border"
-                android:gravity="center"
-                android:text="ID"
-                android:textStyle="bold" />
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/border"
-                android:gravity="center"
-                android:text="Name"
-                android:textStyle="bold" />
-
-            <TextView
-
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/border"
-                android:gravity="center"
-                android:text="Password"
-                android:textStyle="bold" />
-
-        </TableRow>
-
-        <TableRow>
-
-            <ListView
-                android:id="@+id/am_tv_ps"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="3" />
-        </TableRow>
-    </TableLayout>
-</LinearLayout>
+</com.example.matthew.componentsandroid.View.ViewUtils.DrawerLayoutMatthew>

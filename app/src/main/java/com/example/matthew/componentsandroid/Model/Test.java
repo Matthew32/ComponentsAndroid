@@ -12,10 +12,10 @@ import rx.Observable;
  * Created by gonde on 30/07/2016.
  */
 public interface Test {
-    @GET("test/{id}")
+    @GET("posts/{id}")
     Call<TestComponents> listRepos(@Path("id") String id);
 
-    @GET("test")
+    @GET("posts")
     Observable<List<TestComponents>> listReposAll();
 
 }

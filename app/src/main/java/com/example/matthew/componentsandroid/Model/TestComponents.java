@@ -10,9 +10,9 @@ import java.util.Observable;
 public class TestComponents {
     @SerializedName("id")
     private int id;
-    @SerializedName("name")
+    @SerializedName("title")
     private String name;
-    @SerializedName("password")
+    @SerializedName("body")
     private String password;
 
     public TestComponents(int id, String name, String password) {
