@@ -29,6 +29,6 @@ public class DrawerClick implements ListView.OnItemClickListener {
      * Swaps fragments in the main content view
      */
     private void selectItem(int position) {
-    provider.switchMenuFragment(position);
+        provider.switchMenuFragment(position);
     }
 }

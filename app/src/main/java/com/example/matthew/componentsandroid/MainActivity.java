@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         provider = new IntentsProvider(getSupportFragmentManager(), this);
         setTab();
-
+        provider.openMain();
     }
 
     private void setTab() {
@@ -88,8 +88,22 @@ public class MainActivity extends AppCompatActivity {
                         // Marcar item presionado
                         menuItem.setChecked(true);
                         // Crear nuevo fragmento
+
                         String title = menuItem.getTitle().toString();
-                        provider.switchMenuFragment(0);
+                        switch (menuItem.getItemId()) {
+                            case R.id.nav_list_view:
+                                provider.switchMenuFragment(0);
+                                break;
+                            case R.id.nav_viewPager:
+                                provider.switchMenuFragment(1);
+                                break;
+                            case R.id.nav_log_out:
+                                System.exit(1);
+                                break;
+                            case R.id.nav_home:
+                                provider.openMain();
+                                break;
+                        }
                         drawerLayout.closeDrawer(Gravity.LEFT);
                         return true;
                     }
