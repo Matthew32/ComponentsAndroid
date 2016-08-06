@@ -24,6 +24,11 @@ import com.github.florent37.materialviewpager.header.HeaderDesign;
 public class FragmentViewPager extends Fragment {
     private View v;
 
+    public MaterialViewPager getPager() {
+        return pager;
+    }
+
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

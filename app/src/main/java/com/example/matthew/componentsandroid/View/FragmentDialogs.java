@@ -1,6 +1,7 @@
 package com.example.matthew.componentsandroid.View;
 
 import android.app.DatePickerDialog;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.design.widget.CoordinatorLayout;
@@ -87,13 +88,11 @@ public class FragmentDialogs extends Fragment implements View.OnClickListener {
                 dialog.show(getFragmentManager(), "");
                 break;
             case R.id.fd_btn_snack_bar:
+                Snackbar.make(getActivity().findViewById(android.R.id.content), "i'm a SnackBar!!", Snackbar.LENGTH_LONG)
 
-                CoordinatorLayout coordinator = new CoordinatorLayout(getActivity());
-                Snackbar snackbar = Snackbar
-                        .make(coordinator, "I'm a SnackBar it's a pleasure user", Snackbar.LENGTH_LONG);
+                        .setActionTextColor(Color.RED)
+                        .show();
 
-
-                snackbar.show();
                 break;
         }
     }

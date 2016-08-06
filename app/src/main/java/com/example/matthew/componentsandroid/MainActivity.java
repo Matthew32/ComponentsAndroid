@@ -19,6 +19,7 @@ import android.widget.ListView;
 
 import com.example.matthew.componentsandroid.Controller.Persistency;
 import com.example.matthew.componentsandroid.View.ViewUtils.IntentsProvider;
+import com.github.florent37.materialviewpager.MaterialViewPager;
 
 /**
  * Created by gonde on 30/07/2016.
@@ -33,6 +34,12 @@ public class MainActivity extends AppCompatActivity {
      * Instancia del drawer
      */
     private DrawerLayout drawerLayout;
+    private MaterialViewPager viewPager;
+
+    public MaterialViewPager getViewPager() {
+        return viewPager;
+    }
+
 
     /**
      * Titulo inicial del drawer
